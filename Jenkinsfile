@@ -1,7 +1,7 @@
 pipeline {
     agent {
         docker {
-            image 'localhost:8123/build:1.1.0'
+            image '192.168.212.91:8123/build:1.1.3'
         }
     }
 
@@ -22,9 +22,9 @@ pipeline {
         }
         stage ('Build docker image') {
             steps {
-                sh 'docker build --tag=localhost:8123/boxfuse:staging .'
-                sh 'docker login localhost:8123 -u admin -p qweasd'
-                sh 'docker push localhost:8123/boxfuse:staging'
+                sh 'docker build --tag=192.168.212.91:8123/boxfuse:staging .'
+                sh 'docker login 192.168.212.91:8123 -u admin -p qweasd'
+                sh 'docker push 192.168.212.91:8123/boxfuse:staging'
             }
         }
     }

@@ -7,3 +7,5 @@ RUN add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubunt
 RUN apt-get update
 RUN apt-get -y install docker-ce
 RUN apt-get clean
+RUN usermod -aG docker jenkins
+USER root
