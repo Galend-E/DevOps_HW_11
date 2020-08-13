@@ -1,4 +1,4 @@
-pipeline {
+ pipeline {
     agent {
         docker {
             image 'build:1.1.0'
@@ -29,6 +29,5 @@ pipeline {
                 sh 'docker push 192.168.212.91:8123/boxfuse:staging'
             }
         }
-        stage ('')
     }
 }
