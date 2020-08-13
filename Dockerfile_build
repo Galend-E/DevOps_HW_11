@@ -1,0 +1,2 @@
+FROM docker:dind
+RUN apk add --update openjdk8 git maven openssh-client
