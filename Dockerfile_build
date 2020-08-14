@@ -1,2 +1,4 @@
 FROM docker:dind
+#Maven здесь можно не устанавливать, если использовать настроенный в Jenkins (m3)
+#Либо наоборот установить и использовать в контейнере, но тогда не добавлять tool в pipeline
 RUN apk add --update openjdk8 git maven openssh-client
